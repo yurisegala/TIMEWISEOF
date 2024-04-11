@@ -2,12 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- Permissão de acesso à localização precisa -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- Permissão de acesso à internet (opcional, dependendo do seu caso de uso) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Permissão de acesso à localização precisa -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Permissão de acesso à internet (opcional, dependendo do seu caso de uso) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -21,14 +20,21 @@
         android:theme="@style/Theme.TimeOficial"
         tools:targetApi="31">
         <activity
-            android:name=".TelaPonto"
-            android:exported="false" />
+            android:name=".RegistroPonto"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".TelaPonto"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Login"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

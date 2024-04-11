@@ -28,7 +28,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="413dp"
+        android:layout_width="500dp"
         android:layout_height="126dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,12 +111,13 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="300dp"
-        android:layout_height="26dp"
+        android:layout_height="45dp"
         android:layout_marginTop="80dp"
         android:text="endereco a config"
         android:textColor="@color/cor_letra_botao"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -125,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.14500684" />
+        app:layout_constraintGuide_percent="0.19" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -217,7 +218,7 @@
         app:layout_constraintGuide_percent="0.76" />
 
     <Button
-        android:id="@+id/buttonBaterPonto"
+        android:id="@+id/baterponto"
         android:layout_width="229dp"
         android:layout_height="55dp"
         android:layout_marginTop="168dp"
