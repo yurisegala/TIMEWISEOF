@@ -18,7 +18,7 @@ import android.content.DialogInterface;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -41,6 +41,7 @@ public class TelaPonto extends AppCompatActivity {
     private TextView clockTextView;
     private Handler handler;
     private Runnable updateTimeRunnable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,11 +101,14 @@ public class TelaPonto extends AppCompatActivity {
 
     private void showConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Tem certeza que deseja voltar para a tela anterior?")
+        builder.setMessage("Tem certeza que deseja voltar para a tela de login?")
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // Volta para a tela anterior
-                        onBackPressed();
+                        // Volta para a tela de login
+                        Intent intent = new Intent(TelaPonto.this, Login.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Limpa as atividades da pilha
+                        startActivity(intent);
+                        finish(); // Finaliza a atividade atual para evitar que o usuário retorne a ela ao pressionar o botão de voltar
                     }
                 })
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
